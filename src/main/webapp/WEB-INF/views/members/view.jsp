@@ -5,10 +5,12 @@
 
 <div id="profile" class="listing">
 	<img src="${profile.pictureUrl}" alt="Profile Picture" />
+	<h2><c:out value="${profile.email}" /></h2>
 	<h2><c:out value="${profile.displayName}" /></h2>
 	<ul id="connectedProfiles">
 		<c:forEach var="connectedProfile" items="${connectedProfiles}">
 		<li><a href="${connectedProfile.url}">${connectedProfile.name}</a></li>
+		
 		</c:forEach>
 	</ul>
 	<fb:like></fb:like>
