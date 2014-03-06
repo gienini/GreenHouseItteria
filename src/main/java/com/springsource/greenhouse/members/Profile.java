@@ -24,13 +24,16 @@ public class Profile {
 	private Long accountId;
 	
 	private String displayName;
+	
+	private String email;
 
 	private String pictureUrl;
 	
-	public Profile(Long accountId, String displayName, String pictureUrl) {
+	public Profile(Long accountId, String displayName, String pictureUrl, String email) {
 		this.accountId = accountId;
 		this.displayName = displayName;
 		this.pictureUrl = pictureUrl;
+		this.email=email;
 	}
 
 	/**
@@ -54,5 +57,13 @@ public class Profile {
 	 */
 	public String getPictureUrl() {
 		return pictureUrl;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }
